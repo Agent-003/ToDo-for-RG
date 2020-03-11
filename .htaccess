@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule /vendor/css/([^\/]+).css$ css/$1.css [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !\.(css|jpg|gif|png|zip|rar|doc|xls|js|tif|tiff|docx|xlsx|ico)$
+RewriteRule .* index.php [L]

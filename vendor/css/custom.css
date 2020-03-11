@@ -1,0 +1,116 @@
+body {
+    background: url("../images/bg3.jpg") repeat repeat;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.input-group-text {
+    color: #fff;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.check {
+    text-decoration: line-through;
+}
+
+.bg-primary {
+    background-color: #3c5ca3 !important;
+}
+
+.btn-link {
+    color: #98b0d2;
+}
+
+.bg-primary i {
+    color: #98b0d2;
+}
+
+i.fa-check {
+    color: white;
+}
+
+.card-body .btn-link, .card-body span {
+    color: #999;
+}
+
+tr:hover {
+    background: #fcfed5;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    /*padding: 1rem;*/
+    min-height: 65px;
+}
+
+div.bg-primary {
+    min-height: 65px;
+}
+
+#project-new div.btn-group {
+    display: inherit;
+}
+
+.bg-primary div.btn-group {
+    display: none;
+}
+
+div.row:hover .text-white div.btn-group {
+    display: inherit;
+}
+
+div.buttons {
+    display: none;
+}
+
+tr:hover div.buttons {
+    display: initial !important;
+}
+
+.fa-plus {
+    color: #599073;
+    margin: 5px 0 0 5px;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-header:first-child {
+    border-radius: 0;
+}
+
+.bg-light {
+}
+
+tr td:first-child {
+    border-right: 1px solid #efdadf;
+    width: 90px;
+}
+
+
+tr.sortable {
+    height: 65px;
+}
+
+tr:last-child:hover {
+    background: #fcfed5;
+}
+
+.btn-primary i.fa-plus {
+    color: #fff;
+}
