@@ -230,7 +230,7 @@ function addTask(id) {
                         '<tbody class="ui-sortable">' +
                         '<tr id="' + data + '" class="sortable ui-sortable-handle"><td class="text-center">' +
                         '<input class="form-check-input" type="checkbox" value="0" id="check' + data + '" onclick="check(' + data + ')"></td>' +
-                        '<td id="name-' + data + ' " class=" "><span>' + task + '</span></td>' +
+                        '<td id="name-' + data + '" ><span>' + task + '</span></td>' +
                         '<td class="text-center w-25">' +
                         '<div class="btn-group buttons" role="group" >' +
                         '<button class="btn btn-link" onclick="editTask(' + data + ')">' +
