@@ -1,0 +1,109 @@
+SQL task
+
+- get all statuses, not repeating, alphabetically ordered:
+
+    SELECT 
+		name, status 
+	FROM 
+		tasks 
+	GROUP BY 
+		name 
+	ORDER BY 
+		name ASC;
+
+- get the count of all tasks in each project, order by tasks count descending:
+
+	SELECT
+		projects.name AS project,
+		COUNT( tasks.id ) AS tasks 
+	FROM
+		projects
+		INNER JOIN tasks ON projects.id = project_id 
+	GROUP BY 
+		project 
+	ORDER BY 
+		tasks DESC;
+		
+- get the count of all tasks in each project, order by projects names
+
+	SELECT
+		projects.NAME AS project,
+		COUNT( tasks.id ) AS count 
+	FROM
+		projects
+		INNER JOIN tasks ON projects.id = project_id 
+	GROUP BY
+		project 
+	ORDER BY
+		project ASC;
+		
+- get the tasks for all projects having the name beginning with "N" letter
+
+	SELECT
+		* 
+	FROM
+		tasks,
+		projects 
+	WHERE
+		tasks.project_id = projects.id 
+		AND projects.name LIKE "n%";	
+		
+- get the list of all projects containing the a' letter in the middle of the name, and show the tasks count near each project. 
+	Mention that there can exist projects without tasks and tasks with project _ id = NULL
+		
+	SELECT
+		projects.NAME,
+		COUNT( tasks.id ) 
+	FROM
+		tasks,
+		projects 
+	WHERE
+		tasks.project_id = projects.id 
+		AND projects.name LIKE "%a%";		
+
+- get the list of tasks with duplicate names. Order alphabetically
+
+	SELECT
+		tasks.name
+	FROM
+		tasks
+	GROUP BY
+		tasks.name
+	HAVING
+		COUNT( id ) > 1
+	ORDER BY	
+		tasks.name ASC
+
+- get list of tasks having several exact matches of both name and status, from the project 'Garage'. Order by matches count 
+
+	SELECT 
+		name
+	FROM
+		tasks 
+	WHERE
+		project_id = ( SELECT id FROM projects WHERE NAME = 'Garage' ) 
+	GROUP BY
+		name, tasks.status 
+	HAVING
+		COUNT( id ) > 1 
+	ORDER BY
+		COUNT( id ) ASC;
+
+
+- get the list of project names having more than 10 tasks in status 'completed'. Order by project_id
+
+	SELECT
+		projects.`name` AS project_name,
+	FROM
+		projects
+		INNER JOIN tasks ON projects.id = project_id,
+		projects 
+	WHERE
+		tasks.`status` != 0 
+	GROUP BY
+		project_name,
+		tasks.`status` 
+	HAVING
+		COUNT( tasks.id ) > 10 
+	ORDER BY
+		tasks.project_id ASC;
