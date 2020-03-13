@@ -5,7 +5,6 @@
     </div>
 </div>
 <div class="container">
-    <!--    <div class="row">-->
     <form action="../user/actionLogin" method="post">
         <div class="form-group row">
             <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
@@ -21,7 +20,7 @@
         </div>
         <div class="form-group row">
             <div class="col-5 text-right">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Sign in <i class="fa fa-sign-in" aria-hidden="true"></i></button>
             </div>
             <p class="col-2 text-center">OR</p>
             <div class="col-5 text-left">

@@ -2,6 +2,14 @@
     <div class="py-5 text-center">
         <h2>SIMPLE TODO LISTS</h2>
         <p class="lead">FROM RUBY GARAGE</p>
+        <form action="../user/logOut" method="post" class="text-center">
+            <div class="form-group row">
+                <div class="col-12 text-right">
+                    <button type="submit" class="btn btn-secondary">Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <?php

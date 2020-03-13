@@ -27,6 +27,13 @@ class UserController extends AbstractController
         $this->render('user/login.php', 'layout/layout.php');
     }
 
+    public function logOut()
+    {
+        if (session_unset()) {
+            header("Location: http://" . $_SERVER['HTTP_HOST'] . "/index");
+        }
+    }
+
     public function actionLogin()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
