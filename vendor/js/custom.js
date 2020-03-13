@@ -81,7 +81,7 @@ function newProject() {
 }
 
 function createProject() {
-    var value = $("#title-new").val();
+    var value = $("#title-new").val().trim();
 
     if (value == '') {
         $('#title-new').addClass('alert-danger');
@@ -135,7 +135,7 @@ function createProject() {
 }
 
 function editProject(id) {
-    var value = $("#title-" + id).text();
+    var value = $("#title-" + id).text().trim();
 
     $("#title-" + id).replaceWith('<input type="text" class="form-control form-control-sm" name="title" id="title-edit-' + id + '" ' +
         'value="' + value + '">');
@@ -146,7 +146,7 @@ function editProject(id) {
 }
 
 function updateProject(id) {
-    var name = document.getElementById("title-edit-" + id).value;
+    var name = document.getElementById("title-edit-" + id).value.trim();
 
     if (name == '') {
         $('#title-edit-' + id).addClass('alert-danger');
@@ -259,7 +259,7 @@ function deleteTask(id) {
 }
 
 function editTask(id) {
-    var value = $("#name-" + id).text();
+    var value = $("#name-" + id).text().trim();
 
     $("#name-" + id).replaceWith('<td id="name-' + id + '">' +
         '<input type="text" class="form-control form-control-sm" name="task" id="name-edit-' + id + '" value="' + value + '" required>' +
@@ -273,7 +273,7 @@ function editTask(id) {
 
 function updateTask(id) {
 
-    var name = document.getElementById("name-edit-" + id).value;
+    var name = document.getElementById("name-edit-" + id).value.trim();
 
     if (name == '') {
         $('#name-edit-' + id).addClass('alert-danger');
