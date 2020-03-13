@@ -44,16 +44,14 @@ function newProject() {
 
         $("div.py-5:first").after('<div class="row project">' +
             '<div class="card w-75">' +
-            '<div class="card-header bg-primary  text-white" id="project-new">' +
+            '<div class="card-header bg-primary text-white" id="project-new">' +
             '<div class="row">' +
             '<div class="col-xs-7 col-sm-7 col-md-9">' +
             '<input type="text" class="form-control form-control-sm" name="title" id="title-new" ' +
             'placeholder="Title of new project" required >' +
             '</div>' +
             '<div class="btn-group col-xs-5 col-sm-5 col-md-3" role="group">' +
-            '<button class="btn btn-success" onclick="createProject()"><i class="fa fa-check"></i></button>' +
-            // '<button class="btn btn-secondary" onclick=""><i class="fa fa-trash-o" aria-hidden="true"></i></button>' +
-            '</div>' +
+            '<button class="btn btn-success" onclick="createProject()"><i class="fa fa-check"></i></button></div>' +
             '        </div>' +
             '        </div>' +
             '    </div>' +
@@ -62,7 +60,7 @@ function newProject() {
     } else {
         $("div.project:last").after('<div class="row project">' +
             '<div class="card w-75">' +
-            '<div class="card-header bg-primary  text-white" id="project-new">' +
+            '<div class="card-header bg-primary text-white" id="project-new">' +
             '<div class="row">' +
             '<div class="col-xs-7 col-sm-7 col-md-9">' +
             '<input type="text" class="form-control form-control-sm" name="title" id="title-new" ' +
@@ -105,7 +103,7 @@ function createProject() {
                         '<div class="card-header bg-primary text-white" >' +
                         '<div class="row">' +
                         '<div class="col-xs-7 col-sm-7 col-md-9" >' +
-                        '<span id="title-' + data + '"><i class="fa fa-calendar" aria-hidden="true"></i>' + value + '</span>' +
+                        '<span id="title-' + data + '"><i class="fa fa-calendar" aria-hidden="true"></i> ' + value + '</span>' +
                         '</div>' +
                         '<div class="btn-group col-xs-5 col-sm-5 col-md-3" role="group"> ' +
                         '<button class="btn btn-link" onclick="editProject(' + data + ')">' +
@@ -114,15 +112,15 @@ function createProject() {
                         '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
                         '</button></div></div></div>' +
                         '<div class="card-header bg-light "><div class="row">' +
-                        '<div class="col-1 text-center pt-2"><p><i class="fa fa-plus"></i></p> ' +
-                        '</div><div class="col-11">' +
+                        '<div class="col-xs-1 col-md-1 text-center pt-2"><p><i class="fa fa-plus"></i></p> ' +
+                        '</div><div class="col-xs-11 col-md-11">' +
                         '<div class="input-group"> ' +
                         '<input type="text" class="form-control" name="task" id="task-' + data + '" placeholder="Start typing here to create a task..." required> ' +
                         '<div class="input-group-prepend"> ' +
                         '<button class="btn-success input-group-text btn btn-success" onclick="addTask(' + data + ')">Add Task ' +
                         '</button></div></div></div></div></div></div></div>' +
                         '<div class="container center-block">' +
-                        '    <div class="row justify-content-md-center">' +
+                        '    <div class="row justify-content-center">' +
                         '        <button class="btn btn-primary" onclick="newProject()">' +
                         '            <i class=" fa fa-plus"></i> Add TODO List ' +
                         '        </button>' +
